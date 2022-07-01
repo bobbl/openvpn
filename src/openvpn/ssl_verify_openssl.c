@@ -342,7 +342,7 @@ x509_get_subject(X509 *cert, struct gc_arena *gc)
 
     X509_NAME_print_ex(subject_bio, X509_get_subject_name(cert),
                        0, XN_FLAG_SEP_CPLUS_SPC | XN_FLAG_FN_SN
-                       |ASN1_STRFLGS_UTF8_CONVERT | ASN1_STRFLGS_ESC_CTRL);
+                       | ASN1_STRFLGS_ESC_CTRL);
 
     if (BIO_eof(subject_bio))
     {

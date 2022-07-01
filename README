@@ -1,3 +1,15 @@
+Build modified version that supports non-ascii chars in x509 DN name subjects:
+
+    sudo apt install libssl-dev liblzo2-dev libpam0g-dev
+    git checkout utf8
+    autoreconf -i -v -f
+    ./configure --prefix=$HOME/.local
+    make
+    make install
+    sudo ~/.local/sbin/openvpn --config YOURVPN.ovpn
+
+*************************************************************************
+
 OpenVPN -- A Secure tunneling daemon
 
 Copyright (C) 2002-2018 OpenVPN Inc. This program is free software;
